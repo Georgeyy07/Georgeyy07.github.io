@@ -18,7 +18,7 @@ body {
     width: 420px; 
     height: 420px; 
     border-radius: 50%; /* makes circle */
-    object-fit: cover; 
+    object-fit:cover; 
 }
 
 #texts {
@@ -56,32 +56,6 @@ body {
 
 }
 
-.skills-button{
-    background-color: #ffc107;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-
-}
-
-.skills-button:hover {
-    background-color: #e0a800; 
-}
-
-.frontend-heading {
-    text-align: center;
-    margin-left: -1000px;
-}
-
-.backend-heading {
-    text-align: center;
-    margin-top: 100px;
-    margin-left: -1000px;
+#projectLinks{
+    color: rgb(32, 209, 209);
 }
