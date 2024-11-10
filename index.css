@@ -36,25 +36,27 @@ body {
 
 .reference-button {
     padding: 10px 20px;
-    color: #4CAF50; 
+    color: #FFD700 ; 
     background-color: transparent; 
-    border: 2px solid #4CAF50; 
+    border: 2px solid #FFD700 ; 
     border-radius: 15px;
     transition: all 0.3s ease;
     display: inline-block; 
     margin-bottom: 50px;
 }
 
+.reference-button i{
+    display: block;
+    margin: 35px 0;
+    color: rgb(238, 255, 2);
+    font-size: 23px;
+    transition: all .6s;
+}
+
 .reference-button:hover {
     background-color: #4CAF50; /* change colorway i dont like it */
 }
 
-#references img {
-    margin-right: 20px; /* spacing */
-    vertical-align: middle;
-    /* try to find a way to make the buttom images all the same color */
-
-}
 
 #projectLinks{
     color: rgb(32, 209, 209);
