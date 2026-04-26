@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0; 
+    text-align: center; 
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* spaces out the text from the image */
+}
+
+#circle-image {
+    width: 420px; 
+    height: 420px; 
+    border-radius: 50%; /* makes circle */
+    object-fit:cover; 
+}
+
+#texts {
+    color: rgb(229,219,197);
+}
+
+#name {
+    color: rgb(229,219,197);
+}
+
+#alternating-text {
+    color: rgb(229,219,197);
+    font-size: larger;
+}
+
+.reference-button {
+    padding: 10px 20px;
+    color: #FFD700 ; 
+    background-color: transparent; 
+    border: 2px solid #FFD700 ; 
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    display: inline-block; 
+    margin-bottom: 50px;
+}
+
+.reference-button i{
+    display: block;
+    margin: 35px 0;
+    color: rgb(238, 255, 2);
+    font-size: 23px;
+    transition: all .6s;
+}
+
+.reference-button:hover {
+    background-color: #4CAF50; /* change colorway i dont like it */
+}
+
+
+#projectLinks{
+    color: rgb(32, 209, 209);
+}
