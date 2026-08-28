@@ -1,85 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name = "viewport" charset="UTF-8" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>George Kassir</title>
     <link rel="stylesheet" href="index.css">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet"/>
-
 </head>
-<body style="background-color:#001F3F ;">
-    <div id="texts">
-    <div class="center-container">
-        <img src="me.jpg" id="circle-image">
+<body>
+    <div class="page">
+
+        <!-- LEFT: chess side -->
+        <section class="col chess-col">
+            <h2 class="col-heading chess-heading"><i class="ri-chess-fill"></i> how2chess</h2>
+
+            <div class="embed-wrap" id="chess-embed-wrap">
+                <video class="clip-video" src="chessclip.mp4" controls loop playsinline preload="metadata"></video>
+            </div>
+
+            <p class="tagline">
+                Play me at chess! Add me:
+                <a href="https://www.chess.com/member/georgecarlson" target="_blank" rel="noopener">georgecarlson</a>
+            </p>
+        </section>
+
+        <!-- CENTER: profile -->
+        <section class="col center-col">
+            <div class="center-container">
+                <img src="me.png" id="circle-image" alt="George Kassir">
+            </div>
+
+            <h1>Hi, I'm <span id="name">George Kassir.</span></h1>
+
+            <div id="alternating-text">A</div>
+
+            <p class="desc">
+                <b>Self-driven, quick starter, passionate programmer with a curious mind who
+                enjoys solving complex and challenging real-world problems.</b>
+            </p>
+
+            <div id="references">
+                <a href="https://www.linkedin.com/in/george-kassir-9b29b1244/" class="reference-button" target="_blank" rel="noopener" title="LinkedIn"><i class="ri-linkedin-box-fill"></i></a>
+                <a href="https://www.tiktok.com/@how2codes" class="reference-button" target="_blank" rel="noopener" title="TikTok"><i class="ri-tiktok-fill"></i></a>
+                <a href="https://www.youtube.com/@how2Codes" class="reference-button" target="_blank" rel="noopener" title="YouTube"><i class="ri-youtube-fill"></i></a>
+                <a href="mailto:georgekasir553@gmail.com" class="reference-button" title="Email"><i class="ri-mail-fill"></i></a>
+                <a href="https://github.com/Georgeyy07" class="reference-button" target="_blank" rel="noopener" title="GitHub"><i class="ri-github-fill"></i></a>
+                <a href="GeorgeKassirResume.pdf" class="reference-button" target="_blank" rel="noopener" title="Resume"><i class="ri-article-line"></i></a>
+            </div>
+
+            <div id="projects">
+                <h3 class="projects-heading">Projects</h3>
+                <div id="project-links">
+                    <a href="https://github.com/Zoooe1/AdventureX26" class="project-button" target="_blank" rel="noopener">
+                        🏆 AdventureX 2026 Winner
+                    </a>
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7496216034752983041/" class="project-button" target="_blank" rel="noopener">
+                        🥷 Hack the North Win — Coming Next 👀
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- RIGHT: coding side -->
+        <section class="col code-col">
+            <h2 class="col-heading code-heading"><i class="ri-terminal-box-fill"></i> how2codes</h2>
+
+            <div class="embed-wrap" id="code-embed-wrap">
+                <video class="clip-video" src="combinatoricsclip.mp4" controls loop playsinline preload="metadata"></video>
+            </div>
+
+            <p class="tagline">Combinatorics, animated with <a href="https://github.com/Georgeyy07/combinatorics." target="_blank" rel="noopener">Manim</a></p>
+        </section>
+
     </div>
-    <h1>Hi, I'm <span id="name">George Kasir.</span></h1>
 
-    <div id="alternating-text">A</div>
-
-    <pre style="font-size: x-large;" >
-        <b>Self-driven, quick starter, passionate programmer with a curious mind who
-        enjoys solving complex and challenging real-world problems.</b>
-    </pre>
-
-    <h3>♟️ In my spare time I study and teach chess and coding on Tiktok and Youtube ♟️</h3>
-    </div>
-    
-    <hr style="width: 500px;">
-    <div id="references">
-        <a href="https://www.linkedin.com/in/george-kassir-9b29b1244/" class="reference-button"><i class="ri-linkedin-box-fill" width="45px"></i></a>
-        <a href="https://www.tiktok.com/@how2codes" class="reference-button"><i class="ri-tiktok-fill" width="45px"></i></a>
-        <a href="https://www.youtube.com/channel/UCcbJ9M_61I-J2LxFqsE0Xng" class="reference-button"><i class="ri-youtube-fill" width="45px"></i></a>
-        <a href="mailto:georgekasir553@gmail.com" class="reference-button"><i class="ri-mail-fill" width="45px"></i></a>
-        <a href="https://github.com/Georgeyy07" class="reference-button"><i class="ri-github-fill" width="45px"></i></a>
-        <a href="George's-Resume.pdf" class="reference-button"><i class="ri-article-line" width="45px" alt="Resume"></i></a>
-        <a href="https://leetcode.com/u/mrkasir/" class="reference-button"><i class="ri-code-box-fill" width="45px"></i></a>
-    </div>
-    
-
-    <h1 style="color: rgb(229,219,197);" style="margin-bottom: 100px;"><a href="https://github.com/Georgeyy07" id="projectLinks">Projects</a></h1>
-    <hr style="width: 200px;">
-    <h2 style="color: rgb(229,219,197);">I've expieremented in everything from Software and Hardware</h2>
-<br>
-<br>`
-    
-    <!--.dev or .se would be a cool domain name-->
-    <script> /* the functions parts */
-        const texts = ["Coder", "Developer", "Problem-Solver"]; // text options
-        let index = 0;
-        let charIndex = 0;
-        let currentText = "A ";
-        const typingSpeed = 50; // Speed of typing
-        const erasingSpeed = 50; // Speed of erasing
-        const newTextDelay = 1000; // Delay between current and next text
-
-        function type() {
-            if (charIndex < texts[index].length) {
-                currentText += texts[index].charAt(charIndex);
-                document.getElementById("alternating-text").textContent = currentText;
-                charIndex++;
-                setTimeout(type, typingSpeed);
-            } else {
-                setTimeout(erase, newTextDelay);
-            }
-        }
-
-        function erase() {
-            if (charIndex > 0) {
-                currentText = currentText.substring(0, currentText.length - 1);
-                document.getElementById("alternating-text").textContent = currentText;
-                charIndex--;
-                setTimeout(erase, erasingSpeed);
-            } else {
-                index = (index + 1) % texts.length;
-                setTimeout(type, typingSpeed + 500); // Add a little delay before typing the next word
-            }
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            setTimeout(type, newTextDelay + 250);
-        });
-    </script>
+    <script src="script.js" defer></script>
 </body>
 </html>

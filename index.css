@@ -1,63 +1,249 @@
-body {
+:root {
+    --bg: #001F3F;
+    --bg-soft: #072a4d;
+    --cream: rgb(229, 219, 197);
+    --gold: #FFD700;
+    --teal: #2fd6d6;
+    --border: rgba(229, 219, 197, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: var(--bg);
+    color: var(--cream);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr 1.35fr 1fr;
+    align-items: stretch;
+    height: 100vh;
+    width: 100vw;
+    padding: 2vh 2.5vw;
+    gap: 1.5vw;
+}
+
+.col {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin: 0; 
-    text-align: center; 
+    justify-content: space-between;
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+    border-radius: 18px;
+    padding: 1.5vh 0.8vw;
+    overflow: hidden;
+}
+
+/* --- side columns --- */
+.chess-col, .code-col {
+    background: linear-gradient(180deg, var(--bg-soft), var(--bg));
+    border: 1px solid var(--border);
+}
+
+.chess-col {
+    background-image:
+        repeating-conic-gradient(rgba(255, 215, 0, 0.05) 0% 25%, transparent 0% 50%),
+        linear-gradient(180deg, var(--bg-soft), var(--bg));
+    background-size: 40px 40px, cover;
+}
+
+.code-col {
+    background-image:
+        linear-gradient(rgba(47, 214, 214, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(47, 214, 214, 0.06) 1px, transparent 1px),
+        linear-gradient(180deg, var(--bg-soft), var(--bg));
+    background-size: 28px 28px, 28px 28px, cover;
+}
+
+.col-heading {
+    margin: 0;
+    font-size: clamp(1rem, 1.6vw, 1.4rem);
+    letter-spacing: 0.5px;
+}
+
+.chess-heading { color: var(--gold); }
+.code-heading { color: var(--teal); }
+
+.embed-wrap {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.clip-video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #000;
+}
+
+.tagline {
+    margin: 0;
+    font-size: clamp(0.75rem, 1vw, 0.95rem);
+    text-align: center;
+    max-width: 90%;
+    opacity: 0.9;
+}
+
+.tagline a {
+    color: var(--gold);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px dashed var(--gold);
+}
+
+.code-col .tagline a {
+    color: var(--teal);
+    border-bottom: 1px dashed var(--teal);
+}
+
+/* --- center column --- */
+.center-col {
+    justify-content: space-evenly;
 }
 
 .center-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh; /* spaces out the text from the image */
 }
 
 #circle-image {
-    width: 420px; 
-    height: 420px; 
-    border-radius: 50%; /* makes circle */
-    object-fit:cover; 
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--gold);
 }
 
-#texts {
-    color: rgb(229,219,197);
+h1 {
+    margin: 0;
+    font-size: clamp(1.3rem, 2.4vw, 2rem);
 }
 
 #name {
-    color: rgb(229,219,197);
+    color: var(--cream);
 }
 
 #alternating-text {
-    color: rgb(229,219,197);
-    font-size: larger;
+    color: var(--gold);
+    font-size: clamp(1rem, 1.6vw, 1.3rem);
+    min-height: 1.6em;
+    font-weight: bold;
+}
+
+.desc {
+    margin: 0;
+    max-width: 34vw;
+    font-size: clamp(0.8rem, 1.1vw, 1.05rem);
+    line-height: 1.4;
+    text-align: center;
+}
+
+#references {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8vw;
 }
 
 .reference-button {
-    padding: 10px 20px;
-    color: #FFD700 ; 
-    background-color: transparent; 
-    border: 2px solid #FFD700 ; 
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    display: inline-block; 
-    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(100px, 3.2vw, 46px);
+    height: clamp(100px, 3.2vw, 46px);
+    color: var(--gold);
+    background-color: transparent;
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    text-decoration: none;
 }
 
-.reference-button i{
-    display: block;
-    margin: 35px 0;
-    color: rgb(238, 255, 2);
-    font-size: 23px;
-    transition: all .6s;
+.reference-button i {
+    font-size: clamp(1rem, 1.4vw, 1.3rem);
+    transition: all 0.25s ease;
 }
 
 .reference-button:hover {
-    background-color: #4CAF50; /* change colorway i dont like it */
+    background-color: var(--gold);
+    color: var(--bg);
 }
 
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6vh;
+}
 
-#projectLinks{
-    color: rgb(32, 209, 209);
+.projects-heading {
+    margin: 0;
+    color: var(--teal);
+    font-size: clamp(0.95rem, 1.5vw, 1.25rem);
+}
+
+#project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    align-items: stretch;
+}
+
+.project-button {
+    display: inline-block;
+    padding: 0.5vh 1vw;
+    border: 2px solid var(--teal);
+    border-radius: 12px;
+    color: var(--cream);
+    text-decoration: none;
+    font-size: clamp(0.75rem, 1vw, 0.95rem);
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.project-button:hover {
+    background-color: var(--teal);
+    color: var(--bg);
+}
+
+@media (max-width: 900px), (max-height: 640px) {
+    html, body {
+        overflow: auto;
+    }
+    .page {
+        display: grid;
+        grid-template-columns: 1.15fr 1.15fr 1.15fr;
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+    .col {
+        height: auto;
+        padding: 1vh 0.4vw;
+    }
+    .embed-wrap {
+        min-height: 300px;
+    }
 }
