@@ -2,4 +2,5 @@ FROM nginx:alpine
 
 COPY . /usr/share/nginx/html
 
-EXPOSE 80
+# just a label doesnt do anything, only for knowing port
+EXPOSE 80 
